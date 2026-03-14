@@ -28,6 +28,12 @@ The solution focuses on:
 
 Charts and exploratory analysis were performed using Google Sheets.
 
+## Additional Materials
+
+The exploratory analysis and visualizations were developed in Google Sheets.
+
+[Google Sheets Spreadsheet](https://docs.google.com/spreadsheets/d/1L3zv_QZqnZ2qcXhc-bXTn6FAGxwbwdMMX2Kd4SrFX_E/edit?usp=sharing)
+
 ## Author
 
 Eduardo Adão
