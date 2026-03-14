@@ -1,0 +1,24 @@
+SELECT
+    time,
+    today,
+    yesterday,
+    same_day_last_week,
+    avg_last_week,
+    avg_last_month,
+
+    (same_day_last_week + avg_last_week + avg_last_month) / 3.0 AS baseline,
+
+    today - ((same_day_last_week + avg_last_week + avg_last_month) / 3.0) AS absolute_deviation,
+
+    CASE
+        WHEN (same_day_last_week + avg_last_week + avg_last_month) = 0
+        THEN NULL
+        ELSE
+            (today - ((same_day_last_week + avg_last_week + avg_last_month) / 3.0))
+            /
+            ((same_day_last_week + avg_last_week + avg_last_month) / 3.0)
+    END AS deviation_percentage
+
+FROM checkout_1
+-- FROM checkout_2
+ORDER BY time;
